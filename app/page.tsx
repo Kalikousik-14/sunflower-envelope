@@ -1,13 +1,9 @@
 "use client"
 
-import { useEffect } from "react"
 import { EnvelopeCard } from "@/components/envelope-card"
 import { Sunflower, SunflowerStem } from "@/components/sunflower"
 
 export default function Home() {
-  useEffect(() => {
-    console.log("[v0] Page mounted successfully")
-  }, [])
   const message = `Dear Kindest Stranger,
 
 I have moved from and to a lot of places, came across of lots of kind people, domestic and international. But no one bonded with me so close within a span of 2 days just by being kind and empathetic. You struck me like the first ray of sunshine over a sunflower field.
