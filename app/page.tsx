@@ -6,7 +6,7 @@ import { Sunflower, SunflowerStem } from "@/components/sunflower"
 export default function Home() {
   const message = `Dear Kindest Stranger,
 
-I have moved from and to a lot of places, came across of lots of kind people, domestic and international. But no one bonded with me so close within a span of 2 days just by being kind and empathetic. You struck me like the first ray of sunshine over a sunflower field.
+I have moved from and to a lot of places, came across a lot of kind people, domestic and international. But no one bonded with me so close within a span of 2 days just by being kind and empathetic. You struck me like the first ray of sunshine over a sunflower field.
 
 Eventhough I'm an extrovert, I have my own space that I rarely let people into. But you entered into it within hours, it was like a candle in a cold cabin. I know you felt comfortable with everyone but I was only comfortable with you.
 
@@ -35,11 +35,11 @@ Hope this friendship continues. Thank you.`
           <Sunflower size={65} delay={150} />
         </div>
         
-        {/* Bottom bouquet arrangement */}
-        <div className="absolute bottom-0 left-0 right-0 flex justify-center items-end">
+        {/* Bottom bouquet arrangement - hidden on mobile to avoid overlap with card */}
+        <div className="absolute bottom-0 left-0 right-0 flex justify-center items-end hidden sm:flex">
           <div className="relative flex items-end gap-0">
-            {/* Left flowers - smaller on mobile */}
-            <div className="flex flex-col items-center -mr-4 sm:-mr-8 z-10">
+            {/* Left flowers */}
+            <div className="flex flex-col items-center -mr-8 z-10">
               <Sunflower size={45} delay={300} />
               <SunflowerStem height={120} />
             </div>
@@ -51,7 +51,7 @@ Hope this friendship continues. Thank you.`
             </div>
             
             {/* Right flowers */}
-            <div className="flex flex-col items-center -ml-4 sm:-ml-8 z-10">
+            <div className="flex flex-col items-center -ml-8 z-10">
               <Sunflower size={45} delay={150} />
               <SunflowerStem height={120} />
             </div>
