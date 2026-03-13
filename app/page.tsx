@@ -16,74 +16,74 @@ Hope this friendship continues. Thank you.`
     <main className="min-h-screen bg-gradient-to-b from-amber-50 via-yellow-50 to-green-50 relative overflow-hidden">
       {/* Floating sunflowers background */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {/* Top decorations */}
-        <div className="absolute -top-4 -left-4 opacity-40 animate-bounce" style={{ animationDuration: "3s" }}>
+        {/* Top decorations - hidden on very small screens */}
+        <div className="absolute -top-4 -left-4 opacity-40 animate-bounce hidden sm:block" style={{ animationDuration: "3s" }}>
           <Sunflower size={100} delay={0} />
         </div>
-        <div className="absolute -top-2 right-10 opacity-30 animate-bounce" style={{ animationDuration: "4s", animationDelay: "0.5s" }}>
-          <Sunflower size={80} delay={100} />
+        <div className="absolute -top-2 right-4 sm:right-10 opacity-30 animate-bounce" style={{ animationDuration: "4s", animationDelay: "0.5s" }}>
+          <Sunflower size={50} delay={100} />
         </div>
-        <div className="absolute top-20 left-1/4 opacity-20 animate-bounce" style={{ animationDuration: "3.5s", animationDelay: "1s" }}>
+        <div className="absolute top-16 sm:top-20 left-1/4 opacity-20 animate-bounce hidden sm:block" style={{ animationDuration: "3.5s", animationDelay: "1s" }}>
           <Sunflower size={60} delay={200} />
         </div>
         
-        {/* Side decorations */}
-        <div className="absolute top-1/3 -left-8 opacity-30">
-          <Sunflower size={90} delay={50} />
+        {/* Side decorations - smaller on mobile */}
+        <div className="absolute top-1/3 -left-6 sm:-left-8 opacity-30 hidden sm:block">
+          <Sunflower size={70} delay={50} />
         </div>
-        <div className="absolute top-1/2 -right-6 opacity-25">
-          <Sunflower size={85} delay={150} />
+        <div className="absolute top-1/2 -right-4 sm:-right-6 opacity-25 hidden sm:block">
+          <Sunflower size={65} delay={150} />
         </div>
         
         {/* Bottom bouquet arrangement */}
         <div className="absolute bottom-0 left-0 right-0 flex justify-center items-end">
           <div className="relative flex items-end gap-0">
-            {/* Left flowers */}
-            <div className="flex flex-col items-center -mr-8 z-10">
-              <Sunflower size={70} delay={300} />
-              <SunflowerStem height={180} />
+            {/* Left flowers - smaller on mobile */}
+            <div className="flex flex-col items-center -mr-4 sm:-mr-8 z-10">
+              <Sunflower size={45} delay={300} />
+              <SunflowerStem height={120} />
             </div>
             
             {/* Center flowers */}
             <div className="flex flex-col items-center z-20">
-              <Sunflower size={90} delay={0} />
-              <SunflowerStem height={220} />
+              <Sunflower size={60} delay={0} />
+              <SunflowerStem height={150} />
             </div>
             
             {/* Right flowers */}
-            <div className="flex flex-col items-center -ml-8 z-10">
-              <Sunflower size={70} delay={150} />
-              <SunflowerStem height={180} />
+            <div className="flex flex-col items-center -ml-4 sm:-ml-8 z-10">
+              <Sunflower size={45} delay={150} />
+              <SunflowerStem height={120} />
             </div>
           </div>
         </div>
         
-        {/* Additional scattered flowers */}
-        <div className="absolute bottom-40 left-8 opacity-40">
+        {/* Additional scattered flowers - hidden on mobile */}
+        <div className="absolute bottom-40 left-8 opacity-40 hidden sm:block">
           <Sunflower size={50} delay={250} />
         </div>
-        <div className="absolute bottom-32 right-12 opacity-35">
+        <div className="absolute bottom-32 right-12 opacity-35 hidden sm:block">
           <Sunflower size={55} delay={350} />
         </div>
       </div>
 
       {/* Main content */}
-      <div className="relative z-10 container mx-auto px-4 py-12">
+      <div className="relative z-10 container mx-auto px-3 sm:px-4 py-6 sm:py-12">
         {/* Header */}
-        <header className="text-center mb-12">
-          <div className="flex justify-center mb-4">
-            <Sunflower size={60} />
+        <header className="text-center mb-6 sm:mb-12">
+          <div className="flex justify-center mb-2 sm:mb-4">
+            <Sunflower size={45} />
           </div>
-          <h1 className="text-3xl md:text-4xl font-serif italic text-amber-800 text-balance">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-serif italic text-amber-800 text-balance px-2">
             A Sunflower Bouquet For You
           </h1>
-          <p className="text-amber-700/80 mt-2 font-serif">
+          <p className="text-amber-700/80 mt-1 sm:mt-2 font-serif text-sm sm:text-base">
             A special message wrapped with sunshine
           </p>
         </header>
 
         {/* Envelope Card */}
-        <div className="py-8">
+        <div className="py-4 sm:py-8">
           <EnvelopeCard 
             message={message}
             senderName="Your Friend"
@@ -92,8 +92,8 @@ Hope this friendship continues. Thank you.`
         </div>
       </div>
 
-      {/* Ambient particles */}
-      <div className="absolute inset-0 pointer-events-none">
+      {/* Ambient particles - fewer on mobile */}
+      <div className="absolute inset-0 pointer-events-none hidden sm:block">
         {Array.from({ length: 8 }, (_, i) => (
           <div
             key={i}
